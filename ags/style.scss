@@ -1,0 +1,23 @@
+$fg-color: #{"@theme_fg_color"};
+$bg-color: #282A36;
+
+window.Menu {
+    background: transparent;
+    color: $fg-color;
+    font-weight: bold;
+
+    >centerbox {
+        background: $bg-color;
+        border-radius: 10px 0px 0px 10px;
+        padding-left: 2px;
+        padding-right: 2px;
+        //margin: 8px;
+        border: 2px solid transparent;
+        border-color: #44475a;
+    }
+
+    label {
+        margin: 10px;
+        font-size: 20px;
+    }
+}

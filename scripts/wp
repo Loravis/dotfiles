@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Minimalistic CLI tool for changing wallpapers on hyprland with hyprpaper
+# Created by Loravis (github.com/Loravis)
+
+WALLPAPER_PATH=~/.config/hypr/wallpapers
+CONFIG_FILE=~/.config/hypr/hyprpaper.conf
+
+PURPLE='\033[1;35m'
+BLUE='\033[1;34m'
+NC='\033[0m'
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+
+printf "${PURPLE}Hyprland Wallpaper Utility${NC}\n\n"
+printf "${BLUE}Available wallpapers:${NC}\n\n"
+
+ls -1 $WALLPAPER_PATH
+
+printf "\nInput wallpaper file name: "
+read filename
+filepath="${WALLPAPER_PATH}"/"${filename}"
+
+if test -f "$filepath"; then
+  hyprctl hyprpaper unload all > /dev/null
+
+  hyprctl hyprpaper preload $filepath > /dev/null
+  
+  hyprctl hyprpaper wallpaper ",${filepath}" > /dev/null
+
+  printf "ipc=on\npreload = ${filepath}\nwallpaper = ,${filepath}\n" > $CONFIG_FILE
+  
+  printf "${GREEN}Wallpaper set successfully!${NC}\n"
+else
+  printf "${RED}ERROR: ${filepath} file not found${NC}\n"
+fi

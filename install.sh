@@ -11,3 +11,7 @@ mkdir -p ~/.config/hypr/wallpapers
 cp $PWD/wallpapers/* ~/.config/hypr/wallpapers
 cp $PWD/scripts/wp ~/.config/hypr/
 echo "export PATH=\"\$PATH:~/.config/hypr/\"" >> ~/.bashrc
+
+# Foot terminal
+mkdir -p ~/.config/foot
+cp $PWD/foot/foot.ini ~/.config/foot

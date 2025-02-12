@@ -18,3 +18,4 @@ cp $PWD/foot/foot.ini ~/.config/foot
 
 # Qutebrowser
 cp $PWD/qutebrowser/config.py ~/.config/qutebrowser/
+cp -r $PWD/qutebrowser/dracula ~/.config/qutebrowser

@@ -15,3 +15,6 @@ echo "export PATH=\"\$PATH:~/.config/hypr/\"" >> ~/.bashrc
 # Foot terminal
 mkdir -p ~/.config/foot
 cp $PWD/foot/foot.ini ~/.config/foot
+
+# Qutebrowser
+cp $PWD/qutebrowser/config.py ~/.config/qutebrowser/

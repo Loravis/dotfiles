@@ -1,10 +1,6 @@
-import dracula.draw
+import catppuccin
+
 config.bind('<Ctrl-shift-p>', 'spawn --userscript qute-pass')
 config.load_autoconfig()
 
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 6,
-        'horizontal': 8
-    }
-})
+catppuccin.setup(c, 'mocha', True)

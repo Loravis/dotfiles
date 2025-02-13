@@ -1,20 +1,37 @@
 $fg-color: #{"@theme_fg_color"};
-$bg-color: #1e1e2e;
+$bg-color: #181825;
 
 window.Menu {
     background: transparent;
     color: $fg-color;
     font-weight: bold;
 
-    >centerbox {
+    >box {
         background: $bg-color;
-        border-radius: 10px 0px 0px 10px;
+        border-radius: 0px 10px 10px 0px;
         padding-left: 2px;
         padding-right: 2px;
         //margin: 8px;
         border: 2px solid transparent;
+        border-width: 2px 2px 2px 0px;
         border-color: #44475a;
     }
+    
+    button.leftbtn {
+        margin-left: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 50px;
+        margin-bottom: 10px;
+    }
+
+    button.rightbtn {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
 
     label {
         margin: 10px;
